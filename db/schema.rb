@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160511194724) do
 
   create_table "galleries", force: :cascade do |t|
@@ -20,6 +21,20 @@ ActiveRecord::Schema.define(version: 20160511194724) do
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
   end
+=======
+ActiveRecord::Schema.define(version: 20160512075044) do
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "title",            limit: 255
+    t.text     "body",             limit: 65535
+    t.integer  "commentable_id",   limit: 4
+    t.string   "commentable_type", limit: 255
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+  end
+
+  add_index "comments", ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type", using: :btree
+>>>>>>> 85a20ac34dc6580124227ea2b9eb8a3fd20c6267
 
   create_table "messages", force: :cascade do |t|
     t.text     "body",       limit: 65535, null: false

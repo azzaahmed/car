@@ -1,7 +1,16 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :galleries
   resources :posts
   resources :posts
+=======
+ resources :posts do
+    resources :comments
+  end
+resources :comments do
+    resources :comments
+  end
+>>>>>>> 85a20ac34dc6580124227ea2b9eb8a3fd20c6267
   resources :messages
   root 'homes#index'
   get '/about' => 'homes#about'
