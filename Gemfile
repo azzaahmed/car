@@ -44,3 +44,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'seed_dump', '~> 3.2.2'
+
+gem 'carrierwave', '~> 0.10.0'
+gem 'mini_magick', '~> 4.3'
