@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  resources :posts
-  resources :posts
+ resources :posts do
+    resources :comments
+  end
+resources :comments do
+    resources :comments
+  end
   resources :messages
   root 'homes#index'
   get '/about' => 'homes#about'
